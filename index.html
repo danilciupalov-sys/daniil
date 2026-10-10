@@ -1,34 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lt">
 <head>
     <meta charset="UTF-8">
-    <title>Физика вокруг нас</title>
+    <title>Pasiruošimas Fizikos Egzaminui (VBE)</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f5f7fa; color: #333; }
-        header { background: #2c3e50; color: #fff; padding: 30px; text-align: center; }
-        h1 { margin: 0; font-size: 2.5em; }
-        main { max-width: 800px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .topic { border-left: 4px solid #3498db; padding-left: 15px; margin-top: 20px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; line-height: 1.6; }
+        header { background: #1a365d; color: #fff; padding: 50px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.8em; }
+        header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 1.2em; }
+        main { max-width: 950px; margin: 30px auto; padding: 20px; }
+        .alert-box { background: #ebf8ff; border-left: 5px solid #3182ce; padding: 15px; margin-bottom: 30px; border-radius: 4px; }
+        .class-card { background: #fff; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #3498db; }
+        .class-card h2 { margin-top: 0; color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .formula { background: #fff5f5; padding: 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 1.3em; font-weight: bold; text-align: center; color: #c53030; margin: 15px 0; border: 1px dashed #feb2b2; }
+        .links-list { list-style: none; padding: 0; }
+        .links-list li { margin: 10px 0; }
+        .links-list a { color: #3182ce; text-decoration: none; font-weight: bold; }
+        .links-list a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 30px; color: #7f8c8d; font-size: 0.9em; background: #2d3748; color: #fff; margin-top: 50px; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Физика вокруг нас</h1>
-        <p>Изучаем законы природы вместе</p>
+        <h1>Fizikos VBE Konspektas</h1>
+        <p>Viskas, ko reikia sėkmingam fizikos brandos egzamino išlaikymui</p>
     </header>
+
     <main>
-        <h2>Добро пожаловать!</h2>
-        <p>Этот сайт создан для публикации интересных материалов, формул и заметок по физике.</p>
-        
-        <div class="topic">
-            <h3>Разделы сайта:</h3>
-            <ul>
-                <li>Механика</li>
-                <li>Термодинамика</li>
-                <li>Электричество и магнетизм</li>
-                <li>Оптика</li>
+        <!-- Блок важной информации про экзамен -->
+        <div class="alert-box">
+            <h3>📌 Naudingos nuorodos pasiruošimui:</h3>
+            <ul class="links-list">
+                <li>🔗 <a href="https://smm.lt" target="_blank">Nacionalinė švietimo agentūra (NSA)</a> — oficialios egzaminų programos ir reikalavimai.</li>
+                <li>📝 <a href="https://egzaminai.lt" target="_blank">Egzaminai.lt</a> — praėjusių metų VBE užduotys ir atsakymai (būtina praktikai!).</li>
             </ul>
         </div>
+
+        <!-- Разделы по классам / темам -->
+        <div class="class-card" style="border-left-color: #e53e3e;">
+            <h2>Kinematika ir Dinamika (Mechanika)</h2>
+            <p><strong>Greitis ir pagreitis:</strong> pagrindinės judėjimo lygtys, kurias privaloma žinoti egzamine.</p>
+            <div class="formula">v = v₀ + a · t</div>
+            <div class="formula">s = v₀ · t + (a · t²) / 2</div>
+            
+            <p><strong>Niutono dėsniai:</strong> jėgų pusiausvyra ir judėjimo priežastys.</p>
+            <div class="formula">F = m · a</div>
+        </div>
+
+        <div class="class-card" style="border-left-color: #dd6b20;">
+            <h2>Elektrodinamika</h2>
+            <p><strong>Omo dėsnis grandinės daliai:</strong> pamatas visiems uždaviniams su elektros grandinėmis.</p>
+            <div class="formula">I = U / R</div>
+        </div>
+
+        <div class="class-card" style="border-left-color: #319795;">
+            <h2>Molekulinė fizika ir Termodinamika</h2>
+            <p><strong>Idealiųjų dujų būsenos lygtis (Mendelejevo-Klapeirono):</strong></p>
+            <div class="formula">P · V = (m / M) · R · T</div>
+        </div>
+
+        <div class="class-card" style="border-left-color: #805ad5;">
+            <h2>Optika ir Kvantinė fizika</h2>
+            <p><strong>Šviesos lūžio dėsnis (Sneliuso dėsnis):</strong></p>
+            <div class="formula">sin(α) / sin(β) = n₂ / n₁</div>
+        </div>
     </main>
+
+    <footer>
+        <p>© Pasiruošimo fizikos egzaminui svetainė</p>
+    </footer>
+
 </body>
 </html>
