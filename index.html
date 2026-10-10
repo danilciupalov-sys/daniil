@@ -1,75 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
 <head>
-    <meta charset="UTF-8">
-    <title>Pasiruošimas Fizikos Egzaminui (VBE)</title>
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; line-height: 1.6; }
-        header { background: #1a365d; color: #fff; padding: 50px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.8em; }
-        header p { margin: 10px 0 0 0; opacity: 0.9; font-size: 1.2em; }
-        main { max-width: 950px; margin: 30px auto; padding: 20px; }
-        .alert-box { background: #ebf8ff; border-left: 5px solid #3182ce; padding: 15px; margin-bottom: 30px; border-radius: 4px; }
-        .class-card { background: #fff; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid #3498db; }
-        .class-card h2 { margin-top: 0; color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .formula { background: #fff5f5; padding: 15px; border-radius: 5px; font-family: 'Courier New', Courier, monospace; font-size: 1.3em; font-weight: bold; text-align: center; color: #c53030; margin: 15px 0; border: 1px dashed #feb2b2; }
-        .links-list { list-style: none; padding: 0; }
-        .links-list li { margin: 10px 0; }
-        .links-list a { color: #3182ce; text-decoration: none; font-weight: bold; }
-        .links-list a:hover { text-decoration: underline; }
-        footer { text-align: center; padding: 30px; color: #7f8c8d; font-size: 0.9em; background: #2d3748; color: #fff; margin-top: 50px; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f24">
+  <meta name="description" content="Fizikos mokymosi medžiaga 7–12 klasėms: teorija, konspektai, uždaviniai, kontroliniai darbai ir egzaminai.">
+  <title>Fizikos erdvė | 7–12 klasės</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070e21;--card:#101d39;--line:#29416b;--text:#eef5ff;--muted:#a2b6d5;--cyan:#4ee5e1;--blue:#8caaff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background:radial-gradient(ellipse 50% 48% at 75% 12%,#15406a75,transparent 72%),radial-gradient(ellipse 55% 45% at 5% 70%,#3628646b,transparent 75%),linear-gradient(160deg,#060c1e,#0b1734 60%,#070e21)}
+    .stars{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.55;background-image:radial-gradient(1px 1px at 10% 20%,#fff 99%,transparent),radial-gradient(1px 1px at 78% 14%,#fff 99%,transparent),radial-gradient(2px 2px at 41% 72%,#a8eeff 99%,transparent),radial-gradient(1px 1px at 67% 56%,#fff 99%,transparent),radial-gradient(1px 1px at 26% 84%,#fff 99%,transparent);background-size:290px 240px}
+    .wrap{max-width:1160px;padding:0 24px;margin:auto}header{padding:22px 0;border-bottom:1px solid #ffffff18;background:#07112b88;backdrop-filter:blur(12px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;gap:12px;align-items:center;font-size:19px;font-weight:800;letter-spacing:.3px}.symbol{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;color:#07172a;background:linear-gradient(135deg,var(--cyan),#9fb6ff);font-size:24px}.nav small{color:var(--muted);font-size:13px}
+    .hero{padding:90px 0 72px;position:relative}.hero h1{font-size:clamp(43px,6vw,76px);max-width:760px;line-height:1.07;letter-spacing:-2.4px;margin:17px 0}.hero h1 span{color:var(--cyan)}.hero p{color:var(--muted);font-size:18px;line-height:1.7;max-width:650px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.orbit{position:absolute;right:55px;top:24px;width:270px;height:270px;opacity:.6;pointer-events:none;transform:rotate(-24deg)}.orbit .ring{position:absolute;border:2px solid #7cdfe9a3;border-radius:50%;inset:90px 10px;transform:rotate(60deg)}.orbit .ring:nth-child(2){transform:rotate(120deg)}.orbit .ring:nth-child(3){transform:rotate(0)}.orbit .nucleus{position:absolute;top:calc(50% - 13px);left:calc(50% - 13px);width:26px;height:26px;border-radius:50%;background:var(--cyan);box-shadow:0 0 35px var(--cyan)}
+    section{padding-bottom:65px}.heading{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:22px}.heading h2{font-size:29px;margin:0}.heading p{color:var(--muted);margin:7px 0 0}.grades{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.grade{border:1px solid var(--line);background:#112040b9;border-radius:18px;color:var(--text);padding:21px 8px;cursor:pointer;font:inherit;transition:.2s;text-align:center}.grade strong{font-size:31px;display:block}.grade span{font-size:12px;color:var(--muted)}.grade:hover,.grade:focus-visible{transform:translateY(-3px);border-color:var(--cyan);outline:none}.grade.active{background:linear-gradient(145deg,#164a64,#23305c);border-color:var(--cyan);box-shadow:0 0 0 1px #4ee5e144,0 8px 32px #06122780}.grade.active span{color:#d0f7ff}
+    .panel{margin-top:26px;padding:28px;border:1px solid #41618c87;background:#0d1b37d9;border-radius:24px;box-shadow:0 22px 65px #03091550}.panel-title{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.panel h3{font-size:27px;margin:0}.note{color:var(--muted);margin:8px 0 22px;line-height:1.6}.tag{border:1px solid #4ee5e16b;color:var(--cyan);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.tile{min-height:173px;border:1px solid #35517b;background:linear-gradient(155deg,#182a4a,#111d38);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:11px}.tile .ico{display:grid;place-items:center;background:#4ee5e11c;color:var(--cyan);width:40px;height:40px;border-radius:12px;font-size:22px}.tile h4{font-size:17px;margin:0}.tile p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}.links{margin-top:auto;display:flex;flex-wrap:wrap;gap:7px}.file{font-size:12px;text-decoration:none;color:#e8ffff;background:#24616d90;border:1px solid #4ee5e155;padding:7px 10px;border-radius:8px;overflow-wrap:anywhere}.file:hover{background:#287f83}.empty{font-size:12px;color:#90a8c9;margin-top:auto}.instructions{margin-top:20px;padding:15px 17px;background:#4ee5e10b;border:1px dashed #4ee5e155;border-radius:12px;color:#bacde7;font-size:13px;line-height:1.7}.instructions code{color:var(--cyan)}footer{border-top:1px solid #ffffff1a;color:var(--muted);padding:26px 0 40px;font-size:13px}.foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    @media(max-width:850px){.grades{grid-template-columns:repeat(3,1fr)}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.orbit{opacity:.25;right:-90px}}@media(max-width:540px){.wrap{padding:0 16px}.hero{padding:63px 0 45px}.hero h1{letter-spacing:-1.5px}.grades{gap:8px}.grade{padding:14px 5px}.grade strong{font-size:25px}.tiles{grid-template-columns:1fr}.panel{padding:18px}.nav small{display:none}}
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Fizikos VBE Konspektas</h1>
-        <p>Viskas, ko reikia sėkmingam fizikos brandos egzamino išlaikymui</p>
-    </header>
-
-    <main>
-        <!-- Блок важной информации про экзамен -->
-        <div class="alert-box">
-            <h3>📌 Naudingos nuorodos pasiruošimui:</h3>
-            <ul class="links-list">
-                <li>🔗 <a href="https://smm.lt" target="_blank">Nacionalinė švietimo agentūra (NSA)</a> — oficialios egzaminų programos ir reikalavimai.</li>
-                <li>📝 <a href="https://egzaminai.lt" target="_blank">Egzaminai.lt</a> — praėjusių metų VBE užduotys ir atsakymai (būtina praktikai!).</li>
-            </ul>
-        </div>
-
-        <!-- Разделы по классам / темам -->
-        <div class="class-card" style="border-left-color: #e53e3e;">
-            <h2>Kinematika ir Dinamika (Mechanika)</h2>
-            <p><strong>Greitis ir pagreitis:</strong> pagrindinės judėjimo lygtys, kurias privaloma žinoti egzamine.</p>
-            <div class="formula">v = v₀ + a · t</div>
-            <div class="formula">s = v₀ · t + (a · t²) / 2</div>
-            
-            <p><strong>Niutono dėsniai:</strong> jėgų pusiausvyra ir judėjimo priežastys.</p>
-            <div class="formula">F = m · a</div>
-        </div>
-
-        <div class="class-card" style="border-left-color: #dd6b20;">
-            <h2>Elektrodinamika</h2>
-            <p><strong>Omo dėsnis grandinės daliai:</strong> pamatas visiems uždaviniams su elektros grandinėmis.</p>
-            <div class="formula">I = U / R</div>
-        </div>
-
-        <div class="class-card" style="border-left-color: #319795;">
-            <h2>Molekulinė fizika ir Termodinamika</h2>
-            <p><strong>Idealiųjų dujų būsenos lygtis (Mendelejevo-Klapeirono):</strong></p>
-            <div class="formula">P · V = (m / M) · R · T</div>
-        </div>
-
-        <div class="class-card" style="border-left-color: #805ad5;">
-            <h2>Optika ir Kvantinė fizika</h2>
-            <p><strong>Šviesos lūžio dėsnis (Sneliuso dėsnis):</strong></p>
-            <div class="formula">sin(α) / sin(β) = n₂ / n₁</div>
-        </div>
-    </main>
-
-    <footer>
-        <p>© Pasiruošimo fizikos egzaminui svetainė</p>
-    </footer>
-
+<div class="stars" aria-hidden="true"></div>
+<header><div class="wrap nav"><div class="brand"><div class="symbol">⚛</div><span>Fizikos erdvė</span></div><small>Mokymosi medžiaga 7–12 klasėms</small></div></header>
+<main class="wrap">
+  <div class="hero"><div class="orbit" aria-hidden="true"><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="nucleus"></span></div><div class="eyebrow">Atrask • Suprask • Išmok</div><h1>Fizika prasideda nuo <span>smalsumo.</span></h1><p>Vienoje vietoje – teorija, konspektai, uždaviniai ir kontroliniai darbai. Pasirink klasę ir rask reikalingą mokymosi medžiagą.</p></div>
+  <section id="klases" aria-labelledby="grades-heading"><div class="heading"><div><h2 id="grades-heading">Pasirink klasę</h2><p>Mokymosi medžiaga pagal klases</p></div><span class="tag">7–12 klasės</span></div>
+    <div class="grades" id="grades" role="group" aria-label="Pasirinkti klasę"></div>
+    <div class="panel" id="content" aria-live="polite"><div class="panel-title"><h3 id="class-name">7 klasė</h3><span class="tag" id="class-tag">Pagrindinis ugdymas</span></div><p class="note">Pasirink skyrių. Mokymosi failai bus paskelbti čia.</p><div class="tiles" id="tiles"></div></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Fizikos erdvė</span><span>Mokykimės fizikos kartu ⚛</span></div></footer>
+<script>
+  // Pridėk failus čia. Pavyzdys:
+  // 7: { teorija: [{ title: '1 tema (PDF)', url: 'failai/7kl/tema1.pdf' }] }
+  window.MATERIALS = {
+    7: {}, 8: {}, 9: {}, 10: {}, 11: {}, 12: {}
+  };
+</script>
+<script>
+  const sections=[
+    {id:'teorija',icon:'◈',title:'Teorija',description:'Temų aiškinimai ir pagrindinės sąvokos.'},
+    {id:'konspektai',icon:'▤',title:'Konspektai',description:'Trumpa ir aiški mokymosi medžiaga.'},
+    {id:'uzdaviniai',icon:'∑',title:'Uždaviniai',description:'Uždavinių rinkiniai ir pratybos.'},
+    {id:'kontroliniai',icon:'✓',title:'Kontroliniai darbai',description:'Pasiruošimo ir savarankiško darbo užduotys.'},
+    {id:'egzaminai',icon:'★',title:'Egzaminai',description:'Egzaminų užduotys ir pasiruošimo medžiaga.'}
+  ];
+  const grades=document.getElementById('grades'),tiles=document.getElementById('tiles');
+  let chosen=7;
+  for(let grade=7;grade<=12;grade++){
+    const btn=document.createElement('button');btn.className='grade';btn.type='button';btn.innerHTML=`<strong>${grade}</strong><span>klasė</span>`;btn.addEventListener('click',()=>selectGrade(grade));grades.appendChild(btn);
+  }
+  function selectGrade(grade){
+    chosen=grade;document.querySelectorAll('.grade').forEach((button,i)=>{const active=i+7===grade;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
+    document.getElementById('class-name').textContent=grade+' klasė';document.getElementById('class-tag').textContent=grade>=11?'Vidurinis ugdymas':'Pagrindinis ugdymas';tiles.replaceChildren();
+    sections.filter(item=>grade>=11||item.id!=='egzaminai').forEach(item=>{
+      const tile=document.createElement('article');tile.className='tile';
+      const icon=document.createElement('div');icon.className='ico';icon.textContent=item.icon;
+      const title=document.createElement('h4');title.textContent=item.title;
+      const desc=document.createElement('p');desc.textContent=item.description;
+      const links=document.createElement('div');links.className='links';
+      const resources=(window.MATERIALS?.[grade]?.[item.id]||[]);
+      if(resources.length){resources.forEach(resource=>{const a=document.createElement('a');a.className='file';a.textContent=resource.title;a.href=resource.url;a.target='_blank';a.rel='noopener noreferrer';links.appendChild(a);});}
+      else {const empty=document.createElement('span');empty.className='empty';empty.textContent='Medžiaga bus įkelta netrukus';links.appendChild(empty);}
+      tile.append(icon,title,desc,links);tiles.appendChild(tile);
+    });
+  }
+  document.getElementById('year').textContent=new Date().getFullYear();selectGrade(7);
+</script>
 </body>
 </html>
